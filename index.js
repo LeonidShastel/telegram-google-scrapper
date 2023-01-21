@@ -29,14 +29,15 @@ bot.on("text", async ctx=>{
     }
 });
 
-bot.start(async ctx=>{
+bot.start((ctx) => {
     try{
-        await ctx.reply("Введите запрос в формате: страна, язык, ключ");
+        ctx.reply("Введите запрос в формате: страна, язык, ключ");
     }
     catch (e) {
         console.log(e.message);
     }
-})
+});
+
 
 (async ()=>{
     await bot.launch();
